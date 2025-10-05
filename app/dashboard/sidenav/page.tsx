@@ -63,7 +63,7 @@ const items = [
   {
     title: "Credits",
     icon: Zap,
-    score: 2430,
+    score: "2,430",
   },
 ];
 

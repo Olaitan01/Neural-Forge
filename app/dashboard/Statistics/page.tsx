@@ -7,25 +7,25 @@ const stats = [
   {
     title: "Content generated",
     icon: <ScrollText />,
-    count: 2847,
+    count: "2,847",
     info: "+12% from last month",
   },
   {
     title: "Active Projects",
     icon: <Users />,
-    count: 18,
+    count: "18",
     info: "+3 from last month",
   },
   {
     title: "credit used",
     icon: <Zap />,
-    count: 1230,
+    count: "1,230",
     info: "73% from last month",
   },
   {
     title: "Performance",
     icon: <TrendingUp />,
-    count: 94.2,
+    count: "94.2",
     info: "+2.1% from last month",
   },
 ];
@@ -36,7 +36,12 @@ const Statistcs = () => {
       className={` flex flex-row justify-between gap-6 items-stretch flex-wrap my-8`}
     >
       {stats.map(({ ...item }, index) => (
-        <div key={index} className={`${open ? "w-56 " : "w-64"} rounded-2xl transition-all ease-in delay-75 duration-75`}>
+        <div
+          key={index}
+          className={`${
+            open ? "w-56 " : "w-64"
+          } rounded-2xl transition-all ease-in delay-75 duration-75`}
+        >
           <Card {...item} />
         </div>
       ))}

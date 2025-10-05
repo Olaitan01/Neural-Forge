@@ -26,7 +26,7 @@ const ContentType = () => {
               key={index}
               className={`${
                 open ? "w-35" : "w-44"
-              } transition-all delay-75 duration-100 ease-in`}
+              } transition-all delay-100 duration-150 ease-in`}
             >
               <CardColumn title={label} icon={icon} />
             </div>
