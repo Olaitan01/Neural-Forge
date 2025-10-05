@@ -176,8 +176,8 @@ function AppSidebar() {
                   </div>
                 </div>
                 <SidebarSeparator className="border-[rgb(36,36,41)] border-t w-full my-4" />
-                <div className="p-0.25 rounded-2xl bg-gradient-to-tr from-blue-500 via-purple-600 to-pink-500 my-6 w-48">
-                  <SidebarMenu className="bg-[#18181b] rounded-2xl p-2 flex justify-center items-center mx-auto">
+                <div className="p-0.25 rounded-2xl bg-gradient-to-tr from-blue-500 via-purple-600 to-pink-500 my-6 w-48 mx-auto flex justify-center items-center">
+                  <SidebarMenu className="bg-[#18181b] rounded-2xl p-2 ">
                     {items
                       .map((item) => (
                         <SidebarMenuItem

@@ -1,4 +1,4 @@
-import Card from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { ScrollText, Zap, TrendingUp, Users } from "lucide-react";
 
 const stats = [

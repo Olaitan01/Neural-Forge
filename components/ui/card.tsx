@@ -1,8 +1,8 @@
 interface cardProp {
   title: string;
-  icon: React.ReactNode;
-  count: number;
-  info: string;
+  icon: React.ReactNode | string;
+  count?: number;
+  info?: string;
 }
 
 const Card = ({ title, icon, count, info }: cardProp) => {
@@ -20,4 +20,17 @@ const Card = ({ title, icon, count, info }: cardProp) => {
   );
 };
 
-export default Card;
+const CardColumn = ({ icon, title }: cardProp) => {
+  return (
+    <>
+      <div>
+        <div className=" w-40 h-16 text-sm flex flex-col justify-center items-center text-center bg-[#18181b] rounded-2xl p-2 border-2 border-[#23385d] shadow-2xl shadow-[#23385d]">
+          <span className="inline-block text-2xl">{icon}</span>
+          <span className="inline-block text-xs ">{title}</span>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export { CardColumn, Card };
