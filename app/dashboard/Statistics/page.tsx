@@ -1,6 +1,8 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
 import { ScrollText, Zap, TrendingUp, Users } from "lucide-react";
-
+import { useSidebar } from "@/components/ui/sidebar";
 const stats = [
   {
     title: "Content generated",
@@ -28,10 +30,13 @@ const stats = [
   },
 ];
 const Statistcs = () => {
+  const { open } = useSidebar();
   return (
-    <div className=" flex flex-row justify-center gap-6 items-stretch flex-wrap my-8 ">
+    <div
+      className={` flex flex-row justify-between gap-6 items-stretch flex-wrap my-8`}
+    >
       {stats.map(({ ...item }, index) => (
-        <div key={index} className="w-56 h-32 rounded-lg">
+        <div key={index} className={`${open ? "w-56 " : "w-64"} rounded-2xl transition-all ease-in delay-75 duration-75`}>
           <Card {...item} />
         </div>
       ))}

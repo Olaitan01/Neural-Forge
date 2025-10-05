@@ -1,6 +1,7 @@
+"use client";
 import { CardColumn } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
-
+import { useSidebar } from "@/components/ui/sidebar";
 const contentTypes = [
   { id: "blog", label: "Blog Post", icon: "📝" },
   { id: "social", label: "Social Media", icon: "📱" },
@@ -10,6 +11,8 @@ const contentTypes = [
   { id: "creative", label: "Creative Writing", icon: "✨" },
 ];
 const ContentType = () => {
+  const { open } = useSidebar();
+
   return (
     <div className="p-0.25 rounded-2xl bg-gradient-to-tr from-blue-500 via-purple-600 to-pink-500 my-6 ">
       <div className="bg-[#18181b] rounded-2xl p-6 flex flex-col gap-6 justify-center items-center mx-auto ">
@@ -17,9 +20,14 @@ const ContentType = () => {
           <Sparkles className="text-[rgb(60,132,246)]" />
           <span className="font-extrabold text-2xl">Content Type</span>
         </div>
-        <div className="flex flex-row gap-4 items-stretch w-full flex-wrap ">
+        <div className="flex flex-row gap-4 items-stretch w-full flex-wrap justify-between ">
           {contentTypes.map(({ label, icon }, index) => (
-            <div key={index}>
+            <div
+              key={index}
+              className={`${
+                open ? "w-35" : "w-44"
+              } transition-all delay-75 duration-100 ease-in`}
+            >
               <CardColumn title={label} icon={icon} />
             </div>
           ))}

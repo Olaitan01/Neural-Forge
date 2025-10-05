@@ -24,7 +24,7 @@ const CardColumn = ({ icon, title }: cardProp) => {
   return (
     <>
       <div>
-        <div className="w-35 text-sm flex flex-col justify-center items-center text-center bg-[#18181b] rounded-2xl p-2 border-2 border-[#23385d] shadow-lg shadow-[#23385d]">
+        <div className="w-full text-sm flex flex-col justify-center items-center text-center bg-[#18181b] rounded-2xl p-2 border-2 border-[#23385d] shadow-[#23385d] shadow-2xl">
           <span className="inline-block text-2xl">{icon}</span>
           <span className="inline-block text-xs font-semibold ">{title}</span>
         </div>
